@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <meta name="viewport" content="width=device-width,user-scalale=no"/>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="short icon" href="Taobao.gif">
+</head>
+<body>
+<!--注册页面开始-->
+<div class="taobao-login">
+    <!--头部的提示开始-->
+    <div class="tp-tips">
+        <h3 class="fl">您需要登录才能继续访问</h3>
+        <a href="index.html" class="fr">关闭</a>
+    </div>
+    <div class="logo clearfix"><img src="img/logo_circle.png" alt=""></div>
+    <!--头部的提示结束-->
+
+    <!--注册主体部分开始-->
+    <form action="" class="login">
+        <ul>
+            <li><input type="text" class="person fl" placeholder="手机号/邮箱/会员名"><span class="fr">&bigotimes;</span></li>
+            <li><input type="password" class="pw fl" placeholder="请输入密码"><span class="fr">&bigotimes;</span></li>
+            <li>
+                <a href="javascript:;" class="fl register">免费注册</a>
+                <a href="javascript:;" class="fr">忘记密码</a>
+            </li>
+            <li>登录</li>
+            <li>短信验证码登录</li>
+        </ul>
+    </form>
+    <!--注册主体部分结束-->
+    <!--注册后跳出的提示蒙板开始-->
+    <div class="login-tips">
+        <span>注册成功！正在跳转至登录界面...</span><span class="time">5</span><a href="javascript:;">马上跳转</a>
+    </div>
+    <!--注册后跳出的提示蒙板结束-->
+</div>
+<!--注册页面结束-->
+</body>
+<script src="js/common.js"></script>
+<script>
+    var data = {name:'admin',password:123456};
+    var personInput = document.querySelector('.login ul li:first-child input');
+    var personDel = document.querySelector('.login ul li:first-child span');
+    var passwordInput = document.querySelector('.login ul li:nth-child(2) input');
+    var passwordDel = document.querySelector('.login ul li:nth-child(2) span');
+    var register = document.querySelector('.register');
+    var login = register.parentNode.nextElementSibling;
+    var login_next = login.nextElementSibling;
+    var loginTips = document.querySelector('.login-tips');
+    var loginTipsClose = loginTips.querySelector('a');
+
+    personInput.addEventListener('input',isInput);
+    passwordInput.addEventListener('input',isInput);
+    passwordDel.addEventListener('click',function () {
+        this.previousElementSibling.value = '';
+        this.style.display = 'none'
+    })
+    personDel.addEventListener('click',function () {
+        this.previousElementSibling.value = '';
+        this.style.display = 'none'
+    })
+    function isInput() {
+        var valueTag = this.value;
+        if(valueTag == ''){
+            this.nextElementSibling.style.display = 'none';
+        }else{
+            this.nextElementSibling.style.display = 'block';
+        }
+    }
+    register.addEventListener('click',function () {
+        this.isLogin = !this.isLogin;
+        if(this.isLogin){
+            this.innerHTML = '登录';
+            login.innerHTML = '注册';
+            login_next.innerHTML = '用手机号码注册';
+        }else{
+            this.innerHTML = '免费注册';
+            login.innerHTML = '登录';
+            login_next.innerHTML = '短信验证码登录';
+        }
+    })
+    login.addEventListener('click',function () {
+        var name = personInput.value;
+        var pw = passwordInput.value;
+        if(this.innerText == '登录'){
+            if(/\S/.test(name) && /\S/.test(pw)){
+                if(/^\w{4,}$/.test(name)&&/^\w{6,}$/.test(pw)){
+                    if(name == data.name && pw == data.password){
+                        window.location.href = 'mytaobao.html';
+                    }else {
+                        alert('用户名或密码不正确')
+                    }
+                }else{
+                    alert('用户名或密码输入不规范')
+                }
+            }else{
+                alert('用户名和密码不能为空或有空格！');
+            }
+        }else{
+            if(/^\w{4,}$/.test(name)&&/^\w{6,}$/.test(pw)){
+                data.name = name;
+                data.password = pw;
+                var time = loginTips.querySelector('.time');
+                time.innerHTML = 5;
+                var text = time.innerText;
+                console.log(text)
+                loginTips.style.display = 'block';
+                loginTips.timer = setInterval(function () {
+                    text--;
+                    time.innerHTML = text;
+                    if(text == 0){
+                        clearInterval(loginTips.timer);
+                        loginTips.style.display = 'none';
+                    }
+                },1000)
+            }else{
+                alert('账号大于4，密码大于6,数字大小写字母和下划线')
+            }
+        }
+    });
+    login_next.addEventListener('click',function () {
+
+    });
+
+    loginTipsClose.addEventListener('click',function () {
+        clearInterval(loginTips.timer);
+        loginTips.style.display = 'none';
+        register.innerHTML = '免费注册';
+        login.innerHTML = '登录';
+        login_next.innerHTML = '短信验证码登录';
+        personInput.value = '';
+        passwordInput.value = '';
+    })
+
+</script>
+<script>
+    window.onload = function () {
+        if(!(navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i))) {
+            window.location.href = '../login.html';
+        }
+    }
+</script>
+</html>

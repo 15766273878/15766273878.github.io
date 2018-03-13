@@ -1,0 +1,96 @@
+@r:50rem;
+/*注册页面开始*/
+div.taobao-login{
+  width: 100%;
+  height: 100%;
+/*头部的提示开始*/
+div.tp-tips{
+  width: 100%;
+  height: 100/@r;
+  background: #eeeeee;
+  padding: 30/@r;
+  a{
+    font-size: 30/@r;
+    color: #6B6B6B;
+  }
+}/*头部的提示结束*/
+
+/*头部logo开始*/
+div.logo{
+  width: 160/@r;
+  height: 160/@r;
+  margin: 0 auto;
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}/*头部logo结束*/
+
+  /*注册主体部分开始*/
+  form.login{
+    width: 85%;
+    height: 50%;
+    margin: 50/@r auto;
+    ul{
+      width: 100%;
+      height: 100%;
+      li{
+        height: 15%;
+        margin-top: 5/@r;
+        width: 100%;
+      }
+      li:first-child,li:nth-child(2){
+        padding: 50/@r 10/@r;
+        border-bottom: 1/@r solid orangered;
+        input{
+          font-size: 30/@r;
+        }
+        span{
+          display: none;
+        }
+      }/*用户名密码li结束*/
+      li:nth-child(3){
+        padding-top: 30/@r;
+        a{
+          color: #555555;
+          font-size: 27/@r;
+        }
+      }
+      li:nth-child(4),li:last-child{
+        border-radius: 50/@r;
+        text-align: center;
+        line-height: 100/@r;
+        font-size: 30/@r;
+        margin-top: 50/@r;
+      }
+      li:nth-child(4){
+      background: -webkit-linear-gradient(left,#ff9000,#ff5000) no-repeat;
+        color: white;
+      }
+      li:last-child{
+        color: orangered;
+        border: 1px solid orangered;
+      }
+    }
+  } /*注册主体部分结束*/
+
+  div.login-tips{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    padding: 50/@r;
+    font-size: 30/@r;
+    span.time{
+      color: deeppink;
+    }
+    a{
+      color: blue;
+      text-decoration: underline;
+      margin-left: 20/@r;
+    }
+  }
+
+}/*注册页面结束*/

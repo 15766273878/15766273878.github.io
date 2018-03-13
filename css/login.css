@@ -1,0 +1,161 @@
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none; }
+ul, ol { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}
+select, input { vertical-align:middle; }
+select, input, textarea { font-size:15px; margin:0; }
+textarea { resize:none; }
+img {border:0;	vertical-align:middle;}
+table { border-collapse:collapse; }
+body {
+    font:12px/150% Arial,Verdana,"\5b8b\4f53";
+    color:#6C6C6C;
+    background:#fff
+}
+.clearfix:before,.clearfix:after{
+    content:"";
+    display:table;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+a{color:#6C6C6C; text-decoration:none; }
+a:hover{color:#ff4400;}
+h1,h2,h3,h4,h5,h6{text-decoration:none;font-weight:normal;}
+s,i,em{font-style:normal;text-decoration:none;}
+.col-red{color: #C81623!important;}
+
+/*公共类*/
+.w{
+    width: 1200px;margin:0 auto;
+}
+.fl {
+    float:left
+}
+.fr {
+    float:right
+}
+.al {
+    text-align:left
+}
+.ac {
+    text-align:center
+}
+.ar {
+    text-align:right
+}
+.hide {
+    display:none
+}
+
+/*头部开始*/
+.header{
+    height: 90px;
+}
+.header .logo{
+    height: 90px;
+    width: 110px;
+}
+.logo h1 a{
+    display: block;
+    width: 110px;
+    height: 50px;
+    background: url("../img/icon.png")-108px 6px;
+    text-indent: -999px;
+    margin-top: 25px;
+}
+.header .notice{
+    height: 30px;
+    width: 900px;
+    border: 1px solid #FFB4A8;
+    background: #FEF2F2;
+    margin-top: 25px;
+    text-align: center;
+    line-height: 30px;
+    margin-right: 90px;
+}
+.header .suggest{
+    margin-top: 15px;
+}
+.suggest i{
+    color:#FF4400;
+}
+/*内容开始*/
+.body{
+    height: 600px;
+    background: url("../img/login_bg.jpg")no-repeat center;
+}
+.content{
+    width: 350px;
+    height: 350px;
+    background: #F0E9F7;
+    margin-top: 120px;
+    margin-right:-120px;
+}
+.content .input-tips{
+    height: 80px;
+    font: bold 20px/80px "微软雅黑";
+    color:  #3C3C3C;
+    margin-left: 25px;
+}
+.input-form{
+    height: 230px;
+    width: 300px;
+    margin-left: 25px;
+}
+.input-form div i{
+    width: 42px;
+    height: 42px;
+    background: #DDDDDD;
+    text-align: center;
+    color: white;
+    font: 20px/44px "";
+}
+.input-form div input{
+    width: 234px;
+    font-size: 14px;
+    line-height: 18px;
+    height: 18px;
+    padding: 11px 10px 11px 10px;
+    border: 1px solid #ddd;
+    float: left;
+    margin-bottom: 20px;
+}
+.input-form #login{
+    width: 300px;
+    height: 44px;
+    float: left;
+    background: #FF4400;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+.input-form a{
+    float: left;
+    margin-top: 20px;
+    margin-right: 25px;
+}
+.input-form a i{
+    position: relative;
+    top: 2px;
+    left: -2px;
+}
+.content div{
+    width: 300px;
+    height: 44px;
+    position: relative;
+}
+.input-form .usrna-tips{
+    position: absolute;
+    top:12px;
+    left: 55px;
+    font-size: 14px;
+}
+.input-help{
+    margin-left: 25px;
+}
+.content .input-help a{
+    margin-left: 15px;
+}

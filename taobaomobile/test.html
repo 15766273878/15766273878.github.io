@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div.box{
+            width: 500px;
+            height: 200px;
+            border: 1px solid red;
+            position: relative;
+        }
+        div.box>div{
+            width: 10%;
+            height: 20%;
+            background: blue;
+            position: absolute;
+            bottom: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="box"><div></div></div>
+</body>
+<script src="js/common.js"></script>
+<script>
+    var box = document.querySelector('.box');
+    var child = box.children[0];
+    addTransition(child);
+    box.addEventListener('click',function () {
+        child.style.display = 'block';
+        child.style.width = '100%';
+        child.style.height = '50%';
+    })
+</script>
+</html>

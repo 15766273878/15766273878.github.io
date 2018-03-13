@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝网-登录</title>
+    <link rel="shortcut icon" href="taobao.gif">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="http:////at.alicdn.com/t/font_508229_2uepqhaqk9um1jor.css">
+</head>
+<body>
+<!--头部开始-->
+<div class="header w">
+    <div class="logo fl">
+        <h1><a href="https://www.taobao.com/" title="淘宝网">淘宝网</a></h1>
+    </div>
+    <label class="notice fr">为确保您账户的安全及正常使用，依《网络安全法》相关要求，6月1日起会员账户需绑定手机。如您还未绑定，请尽快完成，感谢您的理解及支持！</label>
+    <a href="javascript:"class="suggest fr"><i class="iconfont icon-bd_xiaoxi"></i>"登录页面"改进建议</a>
+</div>
+<!--内容开始-->
+<div class="body">
+    <div class="w">
+        <div class="content fr">
+            <h1 class="input-tips fl">密码登录</h1>
+            <form action="post" class="input-form fl">
+                <div>
+                    <i class="iconfont icon-huiyuan-copy fl"title="登录名"></i>
+                    <input type="text" id="username">
+                    <span class="usrna-tips">会员名/邮箱/手机号</span>
+                </div>
+                <div>
+                    <i class="iconfont icon-suo fl"title="用户密码""></i>
+                    <input type="password" id="pwd">
+                </div>
+                <button id="login">登录</button>
+                <a href="javacript:"><i class="iconfont icon-weibo" style="color: #E52425"></i>微博登录</a>
+                <a href="javacript:"><i class="iconfont icon-zhifubao" style="color: #2EB7F1"></i>支付宝登录</a>
+            </form>
+            <div class="input-help fl">
+            <a href="register.html" class="input-login fr">免费注册</a>
+            <a href="javacript:" class="forget-name fr">忘记用户名</a>
+            <a href="javacript:" class="forget-pwd fr">忘记密码</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--页脚友情链接开始-->
+<div class="friendlink w">
+    <ul>
+        <li><a href="">阿里巴巴集团</a></li>
+        <li><a href="">阿里巴巴国际站</a></li>
+        <li><a href="">阿里巴巴中国站</a></li>
+        <li><a href="">全球速卖通</a></li>
+        <li><a href="">淘宝网</a></li>
+        <li><a href="">天猫</a></li>
+        <li><a href="">聚划算</a></li>
+        <li><a href="">一淘</a></li>
+        <li><a href="">阿里妈妈</a></li>
+        <li><a href="">飞猪</a></li>
+        <li><a href="">虾米</a></li>
+        <li><a href="">阿里云计算</a></li>
+        <li><a href="">云OS</a></li>
+        <li><a href="">万网</a></li>
+        <li><a href="">支付宝</a></li>
+        <li><a href="">来往</a></li>
+    </ul>
+</div>
+<div class="copyright w">
+    <ul>
+        <li><a href="">关于淘宝</a></li>
+        <li><a href="">合作伙伴</a></li>
+        <li><a href="">营销中心</a></li>
+        <li><a href="">廉政举报</a></li>
+        <li><a href="">联系客服</a></li>
+        <li><a href="">开放平台</a></li>
+        <li><a href="">诚征中心</a></li>
+        <li><a href="">联系我们</a></li>
+        <li><a href="">网站地图</a></li>
+        <li><a href="">法律声明及隐私政策</a></li>
+    </ul>
+    <label>© 2017 Taobao.com 版权所有</label>
+</div>
+<ul class="permission w clearfix">
+    <li><label>网络文化经营许可证:</label>&nbsp;&nbsp;&nbsp;<a href="">文网文[2010]040号</a></li>
+    <li><label>增值电信业务经营许可证：浙B2-20080224-1</label></li>
+    <li><label>信息网络传播视听节目许可证：1109364号</label></li>
+</ul>
+<div class="w"><img src="img/wj.gif" alt=""></div>
+</body>
+<script>
+    //判断pc端还是移动端
+    window.onload = function () {
+        if((navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i))) {
+            window.location.href = 'taobaomobile/login.html';
+        }
+    }
+</script>
+</html>

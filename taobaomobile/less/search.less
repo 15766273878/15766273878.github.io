@@ -1,0 +1,328 @@
+@r:50rem;
+/*淘宝搜素开始*/
+div.taobao-search{
+  width: 100%;
+  height: 100%;
+  background: #f9f9f9;
+  /*头部搜索栏开始*/
+  div.search{
+    width: 100%;
+    height: 100/@r;
+    padding: 20/@r;
+    position: relative;
+    z-index: 2;
+    div{
+      width: 85%;
+      height: 100%;
+      background: #e3e3e5;
+      border-radius: 10/@r;
+      padding-left: 10/@r;
+      color: #999999;
+      span{
+        position: relative;
+        label{
+          font-size: 27/@r;
+          position: relative;
+          top: -3/@r;
+          left: 10/@r;
+        }
+        ul{
+          width: 250/@r;
+          position: absolute;
+          top: 60/@r;
+          z-index: 2;
+          display: none;
+          li{
+            background: #484d50;
+            padding: 5/@r 10/@r;
+            line-height: 50/@r;
+            color:#c7c8c9;
+            font-size: 28/@r;
+            i{
+              color:#c7c8c9;
+              margin-right: 10/@r;
+            }
+            &+li{
+              margin-top:1/@r;
+            }
+            &:first-child{
+              border-radius:15/@r 15/@r 0 0 ;
+              &::before{
+                content: '';
+                width: 0;
+                height: 0;
+                border-width:20/@r;
+                border-style: solid;
+                border-color:transparent transparent #484d50 transparent;
+                position: absolute;
+                top: -36/@r;
+                left: 5/@r;
+              }
+            }
+            &:last-child{
+              border-radius:0 0 15/@r 15/@r  ;
+            }
+          }
+        }
+      }
+      i{
+        color: #999999;
+      }
+      input{
+        color: #999999;
+        background: #e3e3e5;
+      }
+    }
+    i{
+      text-align: center;
+      width: 15%;
+      height: 100%;
+      font-size: 40/@r;
+      color: #666666;
+      line-height: 60/@r;
+      font-weight: bold;
+    }
+    a[href]{
+      width: 15%;
+      height: 100%;
+      i{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    a:last-child{
+      text-align: center;
+      width: 15%;
+      height: 100%;
+      font-size: 30/@r;
+      line-height: 100/@r;
+      position: absolute;
+      right: 10/@r;
+      top: 0;
+      z-index: 1;
+      display: none;
+      background: white;
+    }
+  }
+  /*头部搜索栏结束*/
+
+  /*头部宝贝筛选开始*/
+  ul.screen{
+    width: 100%;
+    height: 100/@r;
+    background: white;
+    border: 1/@r solid gainsboro;
+    li{
+      float: left;
+      a{
+        width: 100%;
+        padding-left: 40/@r;
+        text-align: center;
+        line-height: 100/@r;
+        color: #6B6B6B;
+        font-size: 30/@r;
+        &.active{
+          color: orangered;
+        }
+      }
+      &:first-child{
+        width: 34%;
+        height: 100%;
+      }
+      &+li{
+        width: 25%;
+        height: 100%;
+        a{
+          border-left: 1/@r solid gainsboro;
+        }
+      }
+      &:last-child{
+        width: 16%;
+        height: 100%;
+        border-left: 1/@r solid gainsboro;
+        i{
+          font-size: 40/@r;
+        }
+      }
+    }
+  }
+  /*头部宝贝筛选结束*/
+
+  /*检索到的商品开始*/
+  div.shop{
+    width: 100%;
+    a.goods{
+      border-bottom: 1/@r solid gainsboro;
+      display: block;
+      div.fl:first-child{
+        width: 30%;
+        height: 100%;
+        padding: 20/@r;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      div.fl:last-child{
+        width: 70%;
+        height: 100%;
+        padding-top: 20/@r;
+        p{
+          margin-top: 10/@r;
+          width: 100%;
+          span{
+            color: orangered;
+            font-size: 30/@r;
+          }
+          del{
+            color: grey;
+          }
+        }
+        div{
+          width: 100%;
+          margin-top: 20/@r;
+          color: grey;
+          span:last-child{
+            display: block;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+  /*检索到的商品结束*/
+
+  /*右下角页数切换开始*/
+  a.pageSelect{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 15%;
+    height: 70/@r;
+    line-height: 70/@r;
+    text-align: center;
+    background: #e8e8e8;
+    color: black;
+    z-index: 1;
+  }
+  div.pageSelectPage{
+    width: 0;
+    height: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border-top: 1/@r solid gainsboro;
+    background: #e8e8e8;
+    z-index: 1;
+    ul{
+      width: 100%;
+      height: 50%;
+      border-bottom: 1/@r solid gainsboro;
+      li{
+        float: left;
+        height: 100%;
+        width: 100/3%;
+        text-align: center;
+        line-height: 70/@r;
+        position: relative;
+        &.notAllow{
+          color: #b2b2b2;
+        }
+        &~li{
+          border-left: 1/@r solid gainsboro;
+        }
+        &:nth-child(2) span{
+          color: orangered;
+        }
+        &:nth-child(2) i{
+          position: absolute;
+          width: 60%;
+          height: 60%;
+          background: #e8e8e8;
+          top: -60%;
+          left: 20%;
+          line-height: 40/@r;
+        }
+      }
+    }/*Ul结束*/
+    &>div{
+      padding: 10/@r 60/@r;
+      &>div{
+        height: 40/@r;
+        width: 100%;
+        position: relative;
+        i{
+          width: 40/@r;
+          height: 40/@r;
+          text-align: center;
+          display: block;
+          position: absolute;
+          left: 0;
+          background: #f86d10;
+          color: red;
+          z-index: 1;
+        }
+        div.progressbar{
+          background: #CCCCCC;
+          width: 100%;
+          height: 10/@r;
+          position: absolute;
+          top: 50%;
+          margin-top: -5/@r;
+          &.orange{
+            width: 1%;
+            background: #f86d10;
+          }
+        }
+      }
+    }
+  }
+  /*右下角页数切换结束*/
+
+}
+/*淘宝搜素结束*/
+
+/*页面最下方的加载开始*/
+div.loading{
+  margin-bottom: 130/@r;
+}
+/*页面最下方的加载结束*/
+
+/*App下载广告开始*/
+div.tp-ad{
+  position: fixed;
+  bottom: 0;
+}/*App下载广告结束*/
+
+
+/*遮罩开始*/
+div.cover{
+  width: 100%;
+  height: 100%;
+  background: #f6f6f6;
+  z-index: 1;
+  display: none;
+  position: fixed;
+  top: 0;
+  span{
+    display: block;
+    color: #6B6B6B;
+    margin-top:100/@r;;
+    padding: 10/@r 20/@r;
+  }
+  div{
+    padding: 20/@r 20/@r 0;
+    background: white;
+    a{
+      float: left;
+      padding: 10/@r 20/@r;
+      border-radius: 50/@r;
+      border: 1/@r solid gainsboro;
+      text-align: center;
+      color: #6B6B6B;
+      margin-right: 10/@r;
+      margin-bottom: 30/@r;
+    }
+  }
+}
+/*遮罩结束*/

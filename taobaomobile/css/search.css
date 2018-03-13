@@ -1,0 +1,321 @@
+/*淘宝搜素开始*/
+div.taobao-search {
+  width: 100%;
+  height: 100%;
+  background: #f9f9f9;
+  /*头部搜索栏开始*/
+  /*头部搜索栏结束*/
+  /*头部宝贝筛选开始*/
+  /*头部宝贝筛选结束*/
+  /*检索到的商品开始*/
+  /*检索到的商品结束*/
+  /*右下角页数切换开始*/
+  /*右下角页数切换结束*/
+}
+div.taobao-search div.search {
+  width: 100%;
+  height: 2rem;
+  padding: 0.4rem;
+  position: relative;
+  z-index: 2;
+}
+div.taobao-search div.search div {
+  width: 85%;
+  height: 100%;
+  background: #e3e3e5;
+  border-radius: 0.2rem;
+  padding-left: 0.2rem;
+  color: #999999;
+}
+div.taobao-search div.search div span {
+  position: relative;
+}
+div.taobao-search div.search div span label {
+  font-size: 0.54rem;
+  position: relative;
+  top: -0.06rem;
+  left: 0.2rem;
+}
+div.taobao-search div.search div span ul {
+  width: 5rem;
+  position: absolute;
+  top: 1.2rem;
+  z-index: 2;
+  display: none;
+}
+div.taobao-search div.search div span ul li {
+  background: #484d50;
+  padding: 0.1rem 0.2rem;
+  line-height: 1rem;
+  color: #c7c8c9;
+  font-size: 0.56rem;
+}
+div.taobao-search div.search div span ul li i {
+  color: #c7c8c9;
+  margin-right: 0.2rem;
+}
+div.taobao-search div.search div span ul li + li {
+  margin-top: 0.02rem;
+}
+div.taobao-search div.search div span ul li:first-child {
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+div.taobao-search div.search div span ul li:first-child::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-width: 0.4rem;
+  border-style: solid;
+  border-color: transparent transparent #484d50 transparent;
+  position: absolute;
+  top: -0.72rem;
+  left: 0.1rem;
+}
+div.taobao-search div.search div span ul li:last-child {
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+div.taobao-search div.search div i {
+  color: #999999;
+}
+div.taobao-search div.search div input {
+  color: #999999;
+  background: #e3e3e5;
+}
+div.taobao-search div.search i {
+  text-align: center;
+  width: 15%;
+  height: 100%;
+  font-size: 0.8rem;
+  color: #666666;
+  line-height: 1.2rem;
+  font-weight: bold;
+}
+div.taobao-search div.search a[href] {
+  width: 15%;
+  height: 100%;
+}
+div.taobao-search div.search a[href] i {
+  width: 100%;
+  height: 100%;
+}
+div.taobao-search div.search a:last-child {
+  text-align: center;
+  width: 15%;
+  height: 100%;
+  font-size: 0.6rem;
+  line-height: 2rem;
+  position: absolute;
+  right: 0.2rem;
+  top: 0;
+  z-index: 1;
+  display: none;
+  background: white;
+}
+div.taobao-search ul.screen {
+  width: 100%;
+  height: 2rem;
+  background: white;
+  border: 0.02rem solid #dcdcdc;
+}
+div.taobao-search ul.screen li {
+  float: left;
+}
+div.taobao-search ul.screen li a {
+  width: 100%;
+  padding-left: 0.8rem;
+  text-align: center;
+  line-height: 2rem;
+  color: #6B6B6B;
+  font-size: 0.6rem;
+}
+div.taobao-search ul.screen li a.active {
+  color: orangered;
+}
+div.taobao-search ul.screen li:first-child {
+  width: 34%;
+  height: 100%;
+}
+div.taobao-search ul.screen li + li {
+  width: 25%;
+  height: 100%;
+}
+div.taobao-search ul.screen li + li a {
+  border-left: 0.02rem solid #dcdcdc;
+}
+div.taobao-search ul.screen li:last-child {
+  width: 16%;
+  height: 100%;
+  border-left: 0.02rem solid #dcdcdc;
+}
+div.taobao-search ul.screen li:last-child i {
+  font-size: 0.8rem;
+}
+div.taobao-search div.shop {
+  width: 100%;
+}
+div.taobao-search div.shop a.goods {
+  border-bottom: 0.02rem solid #dcdcdc;
+  display: block;
+}
+div.taobao-search div.shop a.goods div.fl:first-child {
+  width: 30%;
+  height: 100%;
+  padding: 0.4rem;
+}
+div.taobao-search div.shop a.goods div.fl:first-child img {
+  width: 100%;
+  height: 100%;
+}
+div.taobao-search div.shop a.goods div.fl:last-child {
+  width: 70%;
+  height: 100%;
+  padding-top: 0.4rem;
+}
+div.taobao-search div.shop a.goods div.fl:last-child p {
+  margin-top: 0.2rem;
+  width: 100%;
+}
+div.taobao-search div.shop a.goods div.fl:last-child p span {
+  color: orangered;
+  font-size: 0.6rem;
+}
+div.taobao-search div.shop a.goods div.fl:last-child p del {
+  color: grey;
+}
+div.taobao-search div.shop a.goods div.fl:last-child div {
+  width: 100%;
+  margin-top: 0.4rem;
+  color: grey;
+}
+div.taobao-search div.shop a.goods div.fl:last-child div span:last-child {
+  display: block;
+  text-align: center;
+}
+div.taobao-search a.pageSelect {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 15%;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  text-align: center;
+  background: #e8e8e8;
+  color: black;
+  z-index: 1;
+}
+div.taobao-search div.pageSelectPage {
+  width: 0;
+  height: 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-top: 0.02rem solid #dcdcdc;
+  background: #e8e8e8;
+  z-index: 1;
+  /*Ul结束*/
+}
+div.taobao-search div.pageSelectPage ul {
+  width: 100%;
+  height: 50%;
+  border-bottom: 0.02rem solid #dcdcdc;
+}
+div.taobao-search div.pageSelectPage ul li {
+  float: left;
+  height: 100%;
+  width: 33.33333333%;
+  text-align: center;
+  line-height: 1.4rem;
+  position: relative;
+}
+div.taobao-search div.pageSelectPage ul li.notAllow {
+  color: #b2b2b2;
+}
+div.taobao-search div.pageSelectPage ul li ~ li {
+  border-left: 0.02rem solid #dcdcdc;
+}
+div.taobao-search div.pageSelectPage ul li:nth-child(2) span {
+  color: orangered;
+}
+div.taobao-search div.pageSelectPage ul li:nth-child(2) i {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  background: #e8e8e8;
+  top: -60%;
+  left: 20%;
+  line-height: 0.8rem;
+}
+div.taobao-search div.pageSelectPage > div {
+  padding: 0.2rem 1.2rem;
+}
+div.taobao-search div.pageSelectPage > div > div {
+  height: 0.8rem;
+  width: 100%;
+  position: relative;
+}
+div.taobao-search div.pageSelectPage > div > div i {
+  width: 0.8rem;
+  height: 0.8rem;
+  text-align: center;
+  display: block;
+  position: absolute;
+  left: 0;
+  background: #f86d10;
+  color: red;
+  z-index: 1;
+}
+div.taobao-search div.pageSelectPage > div > div div.progressbar {
+  background: #CCCCCC;
+  width: 100%;
+  height: 0.2rem;
+  position: absolute;
+  top: 50%;
+  margin-top: -0.1rem;
+}
+div.taobao-search div.pageSelectPage > div > div div.progressbar.orange {
+  width: 1%;
+  background: #f86d10;
+}
+/*淘宝搜素结束*/
+/*页面最下方的加载开始*/
+div.loading {
+  margin-bottom: 2.6rem;
+}
+/*页面最下方的加载结束*/
+/*App下载广告开始*/
+div.tp-ad {
+  position: fixed;
+  bottom: 0;
+}
+/*App下载广告结束*/
+/*遮罩开始*/
+div.cover {
+  width: 100%;
+  height: 100%;
+  background: #f6f6f6;
+  z-index: 1;
+  display: none;
+  position: fixed;
+  top: 0;
+}
+div.cover span {
+  display: block;
+  color: #6B6B6B;
+  margin-top: 2rem;
+  padding: 0.2rem 0.4rem;
+}
+div.cover div {
+  padding: 0.4rem 0.4rem 0;
+  background: white;
+}
+div.cover div a {
+  float: left;
+  padding: 0.2rem 0.4rem;
+  border-radius: 1rem;
+  border: 0.02rem solid #dcdcdc;
+  text-align: center;
+  color: #6B6B6B;
+  margin-right: 0.2rem;
+  margin-bottom: 0.6rem;
+}
+/*遮罩结束*/
